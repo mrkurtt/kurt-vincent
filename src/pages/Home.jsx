@@ -1,10 +1,13 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import About from './About';
 
 const Home = () => {
 	return (
-		<div>
-			<p className="text-xl font-bold text-green-500">Home page</p>
-		</div>
+		<>
+			<Hero />
+			<About />
+		</>
 	);
 };
 
