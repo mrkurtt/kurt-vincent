@@ -5,14 +5,14 @@ const Navbar = () => {
 	let Links = [
 		{ name: 'home', link: '#' },
 		{ name: 'about', link: '#about' },
-		{ name: 'skills', link: '/skills' },
-		{ name: 'projects', link: '/projects' },
-		{ name: 'contact', link: '/contact' },
+		{ name: 'skills', link: '#skills' },
+		{ name: 'projects', link: '#projects' },
+		{ name: 'contact', link: '#contact' },
 	];
 	let [open, setOpen] = useState(false);
 
 	return (
-		<div className="shadow-md w-full fixed">
+		<div className="shadow-md w-full fixed top-0 left-0">
 			<div className="md:flex items-center justify-between bg-gray-900 py-4 md:px-10 px-7">
 				{/* logo section */}
 				<div className="font-bold text-green-400 text-2xl cursor-pointer flex items-center gap-1">

@@ -1,17 +1,15 @@
 import React from 'react';
 import AboutPic from '../assets/profile-pic.png';
+import SectionTitle from '../components/SectionTitle';
 const About = () => {
 	return (
 		<section id="about">
-			<div className="py-32">
-				<div className="flex flex-col bg-gray-800 rounded-lg px-8">
-					<div className="flex justify-center items-center">
-						<img src={AboutPic} alt="" width={350} />
-						<div className="flex flex-col gap-y-6">
-							<h1 className="lg:text-3xl text-green-400 text-left font-bold">
-								about me
-							</h1>
-
+			<div className="py-24">
+				<SectionTitle title={'about me'} />
+				<div className="flex flex-col bg-gray-800 rounded-xl">
+					<div className="flex flex-col lg:flex-row gap-x-16 justify-center items-center py-6 lg:py-16 px-6 lg:px-12">
+						<img src={AboutPic} alt="" className="w-48 lg:w-64 mb-6 lg:mb-0" />
+						<div className="flex flex-col gap-y-6 text-center lg:text-left">
 							<p className="text-xl">
 								I'm <span className="text-green-400">Kurt Vincent Timajo</span>,
 								a <span className="text-green-400">web developer</span> based in
@@ -23,8 +21,8 @@ const About = () => {
 							</p>
 						</div>
 					</div>
-				</div>{' '}
-			</div>{' '}
+				</div>
+			</div>
 		</section>
 	);
 };

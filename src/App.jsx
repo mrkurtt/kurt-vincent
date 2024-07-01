@@ -1,7 +1,6 @@
 import './App.css';
 import Layout from './components/Layout';
 import About from './pages/About';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Skills from './pages/Skills';
 import Projects from './pages/projects';
 import Contact from './pages/Contact';
@@ -13,6 +12,8 @@ const App = () => {
 			<Hero />
 			<About />
 			<Skills />
+			<Projects />
+			<Contact />
 		</Layout>
 	);
 };

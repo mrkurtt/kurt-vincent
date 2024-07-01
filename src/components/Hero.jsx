@@ -5,17 +5,18 @@ import { CodeBracketIcon } from '@heroicons/react/16/solid';
 const Hero = () => {
 	return (
 		<section id="hero">
-			<div className="flex justify-center items-center py-32">
-				<div className="flex w-full gap-x-16 items-center justify-center">
-					<div className="flex flex-col gap-y-4">
+			<div className="flex justify-center items-center h-screen">
+				<div className="flex w-full gap-x-16 justify-center items-center ">
+					<div className="flex flex-col items-center gap-y-4">
 						<p className="text-lg md:text-xl lg:text-3xl">Hello there! I'm</p>
-						<h1 className="font-bold text-green-400 text-2xl md:text-3xl lg:text-6xl">
+						<h1 className="text-center font-bold text-green-400 text-6xl md:text-7xl lg:text-8xl">
 							Kurt Vincent Timajo
 						</h1>
 						<hr />
-						<div className="flex items-center gap-x-2">
+						<div className="flex justify-center items-center gap-x-2">
 							<CodeBracketIcon className="w-8 h-8 text-green-400" />
 							<h3 className="text-lg md:text-xl lg:text-3xl">Web Developer</h3>
+							<CodeBracketIcon className="w-8 h-8 text-green-400" />
 						</div>
 						<button
 							type="button"
@@ -24,7 +25,7 @@ const Hero = () => {
 							DOWNLOAD RESUME
 						</button>
 					</div>
-					<img className="" src={Profile} alt="profile-pic.png" width={400} />
+					{/* <img className="" src={Profile} alt="profile-pic.png" width={400} /> */}
 				</div>
 			</div>
 		</section>
