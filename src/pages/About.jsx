@@ -4,7 +4,7 @@ import SectionTitle from '../components/SectionTitle';
 const About = () => {
 	return (
 		<section id="about">
-			<div className="py-24">
+			<div className="py-24 px-4 lg:px-32">
 				<SectionTitle title={'about me'} />
 				<div className="flex flex-col bg-gray-800 rounded-xl">
 					<div className="flex flex-col lg:flex-row gap-x-16 justify-center items-center py-6 lg:py-16 px-6 lg:px-12">
@@ -12,8 +12,8 @@ const About = () => {
 						<div className="flex flex-col gap-y-6 text-center lg:text-left">
 							<p className="text-xl">
 								I'm <span className="text-green-400">Kurt Vincent Timajo</span>,
-								a <span className="text-green-400">web developer</span> based in
-								Cagayan de Oro City, Philippines. I specialize in{' '}
+								a <span className="text-green-400">software developer</span>{' '}
+								based in Cagayan de Oro City, Philippines. I specialize in{' '}
 								<span className="text-green-400">full stack development</span>{' '}
 								utilizing Javascript frameworks such as ReactJS, and NodeJS. I
 								am dedicated to bringing creative ideas to life through building
