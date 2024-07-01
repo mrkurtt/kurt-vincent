@@ -1,14 +1,16 @@
 import React from 'react';
 import SkillCard from '../components/SkillCard';
-import { skills } from '../components/skills';
+import { skills } from '../utils/skills';
 import SectionTitle from '../components/SectionTitle';
 
 const Skills = () => {
 	return (
 		<section id="skills">
-			<div className="w-full h-screen py-24">
+			<div className="w-full py-24 px-4 lg:px-32">
 				<SectionTitle title={'my skills'} />
-
+				<p className="text-center mb-6">
+					technologies and frameworks I learned by building projects
+				</p>
 				<div className="flex flex-wrap justify-center">
 					<div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
 						{skills.map((sk) => (
