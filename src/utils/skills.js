@@ -11,6 +11,17 @@ import Laravel from '../assets/skills/laravel.png';
 import Git from '../assets/skills/git.png';
 import MySQL from '../assets/skills/mysql.webp';
 
+export const technologies = {
+	ReactJS: ReactICON,
+	Tailwind: Tailwind,
+	NodeJS: NodeJS,
+	ExpressJS: ExpressJS,
+	MongoDB: MongoDB,
+	Flutter: Flutter,
+	Laravel: Laravel,
+	MySQL: MySQL,
+};
+
 export const skills = [
 	{
 		title: 'HTML',
