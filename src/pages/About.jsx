@@ -6,10 +6,24 @@ const About = () => {
 		<section id="about">
 			<div className="py-24 px-4 lg:px-32">
 				<SectionTitle title={'about me'} />
-				<div className="flex flex-col bg-gray-800 rounded-xl">
+				<div
+					data-aos="fade-down"
+					data-aos-duration="1000"
+					className="flex flex-col bg-gray-800 rounded-xl"
+				>
 					<div className="flex flex-col lg:flex-row gap-x-16 justify-center items-center py-6 lg:py-8 px-6 lg:px-12">
-						<img src={AboutPic} alt="" className="w-48 lg:w-96 mb-6 lg:mb-0 " />
-						<div className="flex flex-col gap-y-6 text-center lg:text-left">
+						<img
+							data-aos="fade-right"
+							data-aos-duration="1000"
+							src={AboutPic}
+							alt=""
+							className="w-48 lg:w-96 mb-6 lg:mb-0 "
+						/>
+						<div
+							data-aos="fade-left"
+							data-aos-duration="1000"
+							className="flex flex-col gap-y-6 text-center lg:text-left"
+						>
 							<p className="text-2xl">
 								Hey there! I'm{' '}
 								<span className="text-green-400">Kurt Vincent Timajo</span>, a{' '}

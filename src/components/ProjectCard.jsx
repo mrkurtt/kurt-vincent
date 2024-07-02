@@ -4,7 +4,12 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 const ProjectCard = ({ title, description, image, stack, url }) => {
 	return (
-		<div class="max-w-sm bg-gray-800 rounded-lg shadow hover:scale-105 transition-all ease-in-out cursor-pointer">
+		<div
+			data-aos="flip-left"
+			data-aos-easing="ease-out-cubic"
+			data-aos-duration="1000"
+			class="max-w-sm bg-gray-800 rounded-lg shadow hover:scale-105 transition-all ease-in-out cursor-pointer"
+		>
 			<a href="#">
 				<img
 					class="rounded-t-lg"

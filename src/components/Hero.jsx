@@ -1,15 +1,21 @@
 import React from 'react';
-import Profile from '../assets/about-fleft.png';
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 
 const Hero = () => {
 	return (
 		<section id="hero">
 			<div className="hero-section flex justify-center items-center h-screen">
-				<div className="flex w-full gap-x-16 justify-center items-center ">
+				<div
+					data-aos="fade-up"
+					data-aos-duration="1500"
+					className="flex w-full gap-x-16 justify-center items-center "
+				>
 					<div className="flex flex-col items-center gap-y-4">
 						<p className="text-lg md:text-xl lg:text-3xl">Hello there! I'm</p>
-						<h1 className="text-center font-bold text-green-400 text-6xl md:text-7xl lg:text-8xl ">
+						<h1
+							data-aos="fade-up"
+							className="text-center font-bold text-green-400 text-6xl md:text-7xl lg:text-8xl "
+						>
 							Kurt Vincent Timajo
 						</h1>
 						<hr />

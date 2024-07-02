@@ -12,7 +12,11 @@ const Navbar = () => {
 	let [open, setOpen] = useState(false);
 
 	return (
-		<nav className="z-50 backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gray-900 shadow-md w-full fixed top-0 left-0">
+		<nav
+			data-aos="fade-down"
+			data-aos-duration="1500"
+			className="z-50 backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gray-900 shadow-md w-full fixed top-0 left-0"
+		>
 			<div className="md:flex items-center justify-between  py-4 md:px-10 px-4">
 				{/* logo section */}
 				<div className="font-bold text-green-400 text-2xl cursor-pointer flex items-center gap-1">

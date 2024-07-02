@@ -16,7 +16,12 @@ const Contact = () => {
 						idea, or just want to say hi, feel free to reach out.
 					</p>
 				</div>
-				<div className="max-w-1/2 bg-gray-800 rounded-xl py-6 px-12 mt-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
+				<div
+					data-aos="flip-left"
+					data-aos-easing="ease-out-cubic"
+					data-aos-duration="1000"
+					className="max-w-1/2 bg-gray-800 rounded-xl py-6 px-12 mt-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
+				>
 					<h1 className="text-center text-green-400 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl">
 						Kurt Vincent Timajo
 					</h1>

@@ -5,8 +5,14 @@ import Skills from './pages/Skills';
 import Projects from './pages/projects';
 import Contact from './pages/Contact';
 import Hero from './components/Hero';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 const App = () => {
+	useEffect(() => {
+		Aos.init();
+	}, []);
+
 	return (
 		<Layout>
 			<Hero />
