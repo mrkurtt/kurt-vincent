@@ -42,14 +42,12 @@ const Contact = () => {
 								<ContactCard
 									icon={<VscGithubInverted size={20} />}
 									contactInfo={'github.com/mrkurtt'}
-									hrefValue={'https://github.com/mrkurtt'}
+									hrefValue={import.meta.env.VITE_GITHUB}
 								/>
 								<ContactCard
 									icon={<LiaLinkedin size={20} />}
 									contactInfo={'Kurt Vincent Timajo'}
-									hrefValue={
-										'https://www.linkedin.com/in/kurt-vincent-timajo-813b061b6/'
-									}
+									hrefValue={import.meta.env.VITE_LINKEDIN}
 								/>
 							</div>
 						</div>
