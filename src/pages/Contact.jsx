@@ -41,8 +41,8 @@ const Contact = () => {
 								/>
 								<ContactCard
 									icon={<VscGithubInverted size={20} />}
-									contactInfo={'github.com/whackurt'}
-									hrefValue={'https://github.com/whackurt'}
+									contactInfo={'github.com/mrkurtt'}
+									hrefValue={'https://github.com/mrkurtt'}
 								/>
 								<ContactCard
 									icon={<LiaLinkedin size={20} />}
