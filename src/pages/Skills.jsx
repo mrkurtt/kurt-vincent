@@ -23,8 +23,8 @@ const Skills = () => {
 					className="flex flex-wrap justify-center"
 				>
 					<div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-						{skills.map((sk) => (
-							<SkillCard title={sk.title} icon={sk.icon} />
+						{skills.map((sk, i) => (
+							<SkillCard key={i} title={sk.title} icon={sk.icon} />
 						))}
 					</div>
 				</div>

@@ -35,8 +35,9 @@ const ProjectCard = ({ title, description, image, stack, url }) => {
 				</p>
 
 				<div className="flex justify-center gap-x-2 mt-6">
-					{stack.map((st) => (
+					{stack.map((st, i) => (
 						<img
+							key={i}
 							src={st}
 							alt="techstack"
 							className="w-8 hover:scale-105 transition-all ease-in-out cursor-pointer"

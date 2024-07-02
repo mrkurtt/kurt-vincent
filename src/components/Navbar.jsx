@@ -37,8 +37,8 @@ const Navbar = () => {
 							: 'top-[-490px]'
 					}`}
 				>
-					{Links.map((link) => (
-						<li className="md:ml-8 md:my-0 my-7 font-semibold">
+					{Links.map((link, i) => (
+						<li key={i} className="md:ml-8 md:my-0 my-7 font-semibold">
 							<a
 								href={link.link}
 								className="text-gray-300 hover:text-blue-400 duration-500"
@@ -48,10 +48,6 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
-
-				{/* <button className="btn bg-green-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
-					Hire Me
-				</button> */}
 			</div>
 		</nav>
 	);
