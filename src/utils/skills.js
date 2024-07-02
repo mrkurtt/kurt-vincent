@@ -10,6 +10,7 @@ import Flutter from '../assets/skills/flutter.png';
 import Laravel from '../assets/skills/laravel.png';
 import Git from '../assets/skills/git.png';
 import MySQL from '../assets/skills/mysql.webp';
+import Strapi from '../assets/skills/strapi.png';
 
 export const technologies = {
 	ReactJS: ReactICON,
@@ -20,6 +21,7 @@ export const technologies = {
 	Flutter: Flutter,
 	Laravel: Laravel,
 	MySQL: MySQL,
+	Strapi: Strapi,
 };
 
 export const skills = [
