@@ -2,11 +2,12 @@ import React from 'react';
 import SkillCard from '../components/SkillCard';
 import { skills } from '../utils/skills';
 import SectionTitle from '../components/SectionTitle';
+import Container from '../components/Container';
 
 const Skills = () => {
 	return (
 		<section id="skills">
-			<div className="w-full py-24 px-4 lg:px-32">
+			<Container>
 				<SectionTitle title={'my skills'} />
 				<p
 					data-aos="fade-down"
@@ -27,7 +28,7 @@ const Skills = () => {
 						))}
 					</div>
 				</div>
-			</div>{' '}
+			</Container>
 		</section>
 	);
 };

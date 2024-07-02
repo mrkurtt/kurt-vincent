@@ -1,10 +1,11 @@
 import React from 'react';
 import AboutPic from '../assets/profile-pic.png';
 import SectionTitle from '../components/SectionTitle';
+import Container from '../components/Container';
 const About = () => {
 	return (
 		<section id="about">
-			<div className="py-24 px-4 lg:px-32">
+			<Container>
 				<SectionTitle title={'about me'} />
 				<div
 					data-aos="fade-down"
@@ -37,7 +38,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 };

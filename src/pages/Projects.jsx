@@ -2,11 +2,12 @@ import React from 'react';
 import SectionTitle from '../components/SectionTitle';
 import { myprojects } from '../utils/projects';
 import ProjectCard from '../components/ProjectCard';
+import Container from '../components/Container';
 
 const Projects = () => {
 	return (
 		<section id="projects">
-			<div className="w-full py-24 px-4 lg:px-32">
+			<Container>
 				<SectionTitle title={'my projects'} />{' '}
 				<p className="text-center mb-6 font-light">
 					Here you will find some of the personal and clients projects that I
@@ -25,7 +26,7 @@ const Projects = () => {
 						))}
 					</div>
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 };
