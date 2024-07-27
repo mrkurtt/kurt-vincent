@@ -8,6 +8,7 @@ import JPrompt from '../assets/projects/jprompt.png';
 import QRCAMobile from '../assets/projects/qrca-mobile-all.png';
 import HRMSMobile from '../assets/projects/hrms-all.png';
 import BantayTurista from '../assets/projects/bantayturista.png';
+import Ordlabs from '../assets/projects/ordlabs-1.png';
 
 export const myprojects = [
 	{
@@ -88,6 +89,15 @@ export const myprojects = [
 		techStack: [technologies.ReactJS, technologies.Tailwind],
 	},
 
+	{
+		title: 'Ordlabs Company Website',
+		description:
+			'A website built for a Philippine-based custom software development company that offers web and mobile application development services.',
+		link: 'https://ordlabs.vercel.app/',
+		image: Ordlabs,
+		techStack: [technologies.NextJS, technologies.Tailwind],
+	},
+
 	// MOBILE PROJECTS
 	{
 		title: 'Bantay Turista',
@@ -110,17 +120,17 @@ export const myprojects = [
 			technologies.MongoDB,
 		],
 	},
-	{
-		title: 'QRCA Mobile App',
-		description:
-			'PNP-QRCA is a mobile application utilizing QR code technology to efficiently track and manage police personnel attendance.',
-		link: '',
-		image: QRCAMobile,
-		techStack: [
-			technologies.Flutter,
-			technologies.NodeJS,
-			technologies.ExpressJS,
-			technologies.MongoDB,
-		],
-	},
+	// {
+	// 	title: 'QRCA Mobile App',
+	// 	description:
+	// 		'PNP-QRCA is a mobile application utilizing QR code technology to efficiently track and manage police personnel attendance.',
+	// 	link: '',
+	// 	image: QRCAMobile,
+	// 	techStack: [
+	// 		technologies.Flutter,
+	// 		technologies.NodeJS,
+	// 		technologies.ExpressJS,
+	// 		technologies.MongoDB,
+	// 	],
+	// },
 ];

@@ -11,6 +11,7 @@ import Laravel from '../assets/skills/laravel.png';
 import Git from '../assets/skills/git.png';
 import MySQL from '../assets/skills/mysql.webp';
 import Strapi from '../assets/skills/strapi.png';
+import NextJS from '../assets/skills/nextjs.png';
 
 export const technologies = {
 	ReactJS: ReactICON,
@@ -20,8 +21,9 @@ export const technologies = {
 	MongoDB: MongoDB,
 	Flutter: Flutter,
 	Laravel: Laravel,
-	MySQL: MySQL,
+	// MySQL: MySQL,
 	Strapi: Strapi,
+	NextJS: NextJS,
 };
 
 export const skills = [
@@ -46,6 +48,10 @@ export const skills = [
 		icon: ReactICON,
 	},
 	{
+		title: 'Next JS',
+		icon: NextJS,
+	},
+	{
 		title: 'Flutter',
 		icon: Flutter,
 	},
@@ -61,10 +67,10 @@ export const skills = [
 		title: 'MongoDB',
 		icon: MongoDB,
 	},
-	{
-		title: 'MySQL',
-		icon: MySQL,
-	},
+	// {
+	// 	title: 'MySQL',
+	// 	icon: MySQL,
+	// },
 
 	{
 		title: 'Laravel',
