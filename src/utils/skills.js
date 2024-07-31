@@ -21,7 +21,7 @@ export const technologies = {
 	MongoDB: MongoDB,
 	Flutter: Flutter,
 	Laravel: Laravel,
-	// MySQL: MySQL,
+	MySQL: MySQL,
 	Strapi: Strapi,
 	NextJS: NextJS,
 };
@@ -67,10 +67,10 @@ export const skills = [
 		title: 'MongoDB',
 		icon: MongoDB,
 	},
-	// {
-	// 	title: 'MySQL',
-	// 	icon: MySQL,
-	// },
+	{
+		title: 'MySQL',
+		icon: MySQL,
+	},
 
 	{
 		title: 'Laravel',
