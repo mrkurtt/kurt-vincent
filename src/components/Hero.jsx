@@ -30,7 +30,7 @@ const Hero = () => {
 							type="button"
 							class="w-48 text-gray-200 bg-gray-900 border border-green-400 focus:outline-none hover:shadow-md hover:shadow-green-400 font-medium rounded-xl text-xs px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
 						>
-							<a href={"https://docs.google.com/document/d/19PkyMZ6cs8OQ9lZgOljS2qNDkuW-blMFer4PzHr0LBs/edit?usp=sharing"} target="_blank">
+							<a href={"https://drive.google.com/file/d/18Fg5HlYCVG_isEbnwzaABqkLnooI5ESs/view?usp=sharing"} target="_blank">
 								DOWNLOAD RESUME
 							</a>
 						</button>
