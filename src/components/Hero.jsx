@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="flex justify-center items-center gap-x-2">
               <CodeBracketIcon className="w-8 h-8 text-green-400" />
               <h3 className="text-lg md:text-xl lg:text-3xl">
-                Software Developer
+                Software Engineer
               </h3>
               <CodeBracketIcon className="w-8 h-8 text-green-400" />
             </div>
