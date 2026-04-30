@@ -17,8 +17,8 @@ const About = () => {
               data-aos="fade-right"
               data-aos-duration="1000"
               src={AboutPic}
-              alt=""
-              className="w-48 lg:w-96 mb-6 lg:mb-0 "
+              alt="Kurt Vincent Timajo"
+              className="mb-6 h-48 w-48 shrink-0 rounded-full object-cover lg:mb-0 lg:h-96 lg:w-96"
             />
             <div
               data-aos="fade-left"
