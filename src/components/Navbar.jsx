@@ -1,56 +1,65 @@
-import React, { useState } from 'react';
-import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { navLinks } from "../utils/nav";
+import { site } from "../utils/site";
 
 const Navbar = () => {
-	let Links = [
-		{ name: 'home', link: '#' },
-		{ name: 'about', link: '#about' },
-		{ name: 'skills', link: '#skills' },
-		{ name: 'projects', link: '#projects' },
-		{ name: 'contact', link: '#contact' },
-	];
-	let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-	return (
-		<nav
-			data-aos="fade-down"
-			data-aos-duration="1500"
-			className="z-50 backdrop-filter backdrop-blur-lg bg-opacity-30 bg-gray-900 shadow-md w-full fixed top-0 left-0"
-		>
-			<div className="md:flex items-center justify-between  py-4 md:px-10 px-4">
-				{/* logo section */}
-				<div className="font-bold text-green-400 text-2xl cursor-pointer flex items-center gap-1">
-					<span>kurt.vincent</span>
-				</div>
-				{/* Menu icon */}
-				<div
-					onClick={() => setOpen(!open)}
-					className="text-gray-200 absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7"
-				>
-					{open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
-				</div>
-				{/* linke items */}
-				<ul
-					className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-						open
-							? 'top-12 mt-4 backdrop-filter backdrop-blur-lg bg-opacity-70 bg-gray-900'
-							: 'top-[-490px]'
-					}`}
-				>
-					{Links.map((link, i) => (
-						<li key={i} className="md:ml-8 md:my-0 my-7 font-semibold">
-							<a
-								href={link.link}
-								className="text-gray-300 hover:text-blue-400 duration-500"
-							>
-								{link.name}
-							</a>
-						</li>
-					))}
-				</ul>
-			</div>
-		</nav>
-	);
+  return (
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-stone-mid/60 bg-stone-light/80 backdrop-blur-md">
+      <div className="section-inner flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a
+          href="#hero"
+          className="font-display text-lg font-semibold tracking-tight text-ink"
+        >
+          {site.brand}
+        </a>
+
+        <button
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen(!open)}
+          className="text-ink md:hidden"
+        >
+          {open ? (
+            <XMarkIcon className="h-6 w-6" />
+          ) : (
+            <Bars3Icon className="h-6 w-6" />
+          )}
+        </button>
+
+        <ul className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="font-mono text-xs uppercase tracking-wider text-ink-muted transition-colors hover:text-signal"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {open && (
+        <ul className="border-t border-stone-mid bg-stone-light px-4 py-4 md:hidden">
+          {navLinks.map((link) => (
+            <li key={link.href} className="py-3">
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="font-mono text-sm uppercase tracking-wider text-ink-muted"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;

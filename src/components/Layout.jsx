@@ -1,13 +1,14 @@
-import React from 'react';
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
-	return (
-		<div className="font-lato">
-			<Navbar />
-			<div className="bg-gray-900 w-full text-gray-300">{children}</div>
-		</div>
-	);
+  return (
+    <div className="min-h-screen font-sans text-ink">
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
 };
 
 export default Layout;

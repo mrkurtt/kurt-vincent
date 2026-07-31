@@ -1,45 +1,41 @@
-import React from "react";
-import { CodeBracketIcon } from "@heroicons/react/16/solid";
+import { site } from "../utils/site";
 
 const Hero = () => {
   return (
-    <section id="hero">
-      <div className="hero-section flex justify-center items-center h-screen">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          className="flex w-full gap-x-16 justify-center items-center "
-        >
-          <div className="flex flex-col items-center gap-y-4">
-            <p className="text-lg md:text-xl lg:text-3xl">Hello there! I'm</p>
-            <h1
-              data-aos="fade-up"
-              className="text-center font-bold text-green-400 text-6xl md:text-7xl lg:text-8xl "
-            >
-              Kurt Vincent Timajo
-            </h1>
-            <hr />
-            <div className="flex justify-center items-center gap-x-2">
-              <CodeBracketIcon className="w-8 h-8 text-green-400" />
-              <h3 className="text-lg md:text-xl lg:text-3xl">
-                Software Engineer
-              </h3>
-              <CodeBracketIcon className="w-8 h-8 text-green-400" />
-            </div>
-            <button
-              type="button"
-              class="w-48 text-gray-200 bg-gray-900 border border-green-400 focus:outline-none hover:shadow-md hover:shadow-green-400 font-medium rounded-xl text-xs px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-            >
-              <a
-                href={
-                  "https://drive.google.com/file/d/1fXcLJk9ffUjf8PuOOVI-DgxmyuFCwWnl/view?usp=sharing"
-                }
-                target="_blank"
-              >
-                DOWNLOAD RESUME
-              </a>
-            </button>
-          </div>
+    <section
+      id="hero"
+      className="hero-atmosphere relative flex min-h-screen items-center overflow-hidden text-stone"
+    >
+      <div className="section-inner relative z-10 w-full px-4 pb-20 pt-28 sm:px-6 lg:px-8 lg:pb-28 lg:pt-32">
+        <p className="animate-fade-up font-mono text-xs uppercase tracking-[0.2em] text-signal">
+          {site.domain}
+        </p>
+        <h1 className="animate-fade-up-delay mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+          {site.name}
+        </h1>
+        <p className="animate-fade-up-delay mt-5 font-mono text-sm uppercase tracking-wider text-stone-mid sm:text-base">
+          {site.role}
+          <span className="mx-2 text-signal">·</span>
+          {site.tagline}
+        </p>
+        <p className="animate-fade-up-delay-2 mt-8 max-w-xl text-lg leading-relaxed text-stone/90 sm:text-xl">
+          {site.summary}
+        </p>
+        <div className="animate-fade-up-delay-2 mt-10 flex flex-wrap gap-4">
+          <a
+            href="#experience"
+            className="inline-flex items-center bg-signal px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-signal-dark"
+          >
+            View experience
+          </a>
+          <a
+            href={site.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center border border-stone-mid/50 px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-stone transition-colors hover:border-signal hover:text-signal"
+          >
+            Download resume
+          </a>
         </div>
       </div>
     </section>
