@@ -4,7 +4,7 @@ export const site = {
   role: "Full Stack Software Engineer",
   tagline: "Ready for Tech Lead",
   summary:
-    "4+ years turning complex domain requirements into resilient, high-availability systems — TypeScript, Node.js, Next.js; Event-Driven design and CQRS.",
+    "AI does the coding. I do the engineering — architecture, standards, and system ownership imposed on every line it writes. 4+ years shipping resilient, high-availability platforms in TypeScript, Node.js, and Next.js.",
   email: "kurttimajo.dev@gmail.com",
   phone: "+63 956-926-8559",
   github: import.meta.env.VITE_GITHUB || "https://github.com/mrkurtt",

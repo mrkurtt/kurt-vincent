@@ -37,8 +37,8 @@ export const capabilities = [
       "Docker",
       "GitHub Actions",
       "CI/CD",
-      "AI-native development (Cursor)",
-      "Prompt engineering",
+      "Architecture-directed AI coding",
+      "Cursor workflows",
     ],
   },
 ];

@@ -11,7 +11,7 @@ const Leadership = () => {
             <SectionHeader
               eyebrow="Leadership"
               title="How I lead engineering"
-              description="Tech Lead scope means raising the bar, owning the system, and accelerating the people around you."
+              description="Tech Lead scope means directing AI as the coding layer while you own the architecture, raise the quality bar, and accelerate the people around you."
             />
             <div className="space-y-10">
               {leadership.map((item, index) => (

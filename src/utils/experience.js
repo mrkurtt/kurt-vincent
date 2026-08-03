@@ -13,7 +13,7 @@ export const experience = [
       "Led end-to-end feature delivery across NestJS microservices and Next.js interfaces using GraphQL, CQRS, and Event Sourcing for high fault-tolerance workflows.",
       "Mentored junior and associate engineers through code reviews, pairing, and guidance on microservice patterns and TypeScript best practices.",
       "Modernized core toolchains to latest TypeScript standards — improving type safety, reducing tech debt, and optimizing compile-time performance.",
-      "Accelerated production velocity by ~25% by establishing AI-native workflows with Cursor for feature development, navigation, and debugging.",
+      "Accelerated production velocity by ~25% with Cursor AI workflows under architectural constraints — feature development, navigation, and debugging without shipping unsupervised code.",
     ],
   },
   {

@@ -9,7 +9,7 @@ const Contact = () => {
           tone="dark"
           eyebrow="Contact"
           title="Let's talk Tech Lead scope"
-          description="Open to conversations about senior engineering and development leadership roles — systems ownership, team standards, and shipping with velocity."
+          description="Open to senior engineering and development leadership roles — architecture you own, standards you enforce, and AI-accelerated delivery that still ships clean systems."
         />
 
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
