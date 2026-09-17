@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <div className="animate-fade-up-delay-2 mt-10 flex flex-wrap gap-4">
           <a
-            href="#experience"
+            href="/#experience"
             className="inline-flex items-center bg-signal px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-signal-dark"
           >
             View experience

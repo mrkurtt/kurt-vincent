@@ -8,7 +8,7 @@ const Capabilities = () => {
         <SectionHeader
           eyebrow="Capabilities"
           title="Stack by domain"
-          description="Architecture and delivery depth — not a beginner checklist."
+          description="Tied to Timpla, KourtSuite, and Ordlabs Pay — architecture and delivery depth, not a flat skill dump."
         />
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">

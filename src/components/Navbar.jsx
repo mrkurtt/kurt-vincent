@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navLinks } from "../utils/nav";
 import { site } from "../utils/site";
@@ -9,12 +10,12 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-stone-mid/60 bg-stone-light/80 backdrop-blur-md">
       <div className="section-inner flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a
-          href="#hero"
+        <Link
+          to="/"
           className="font-display text-lg font-semibold tracking-tight text-ink"
         >
           {site.brand}
-        </a>
+        </Link>
 
         <button
           type="button"

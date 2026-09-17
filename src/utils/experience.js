@@ -1,5 +1,16 @@
 export const experience = [
   {
+    company: "Ordlabs",
+    role: "Software Engineering Lead",
+    period: "2024 – Present",
+    location: "Philippines",
+    bullets: [
+      "Designed Timpla, KourtSuite, and Ordlabs Pay from architecture through production — commerce ops, multi-tenant SaaS, and an internal payments hub.",
+      "Mentor 3 developers through code reviews, pairing, and architecture and coding standards so AI-accelerated delivery still ships under engineering discipline.",
+      "Own stack choices across TypeScript, NestJS and Express, Next.js, MongoDB, Philippine payment rails, Cloud Run, and AWS EC2.",
+    ],
+  },
+  {
     company: "ScaleForge",
     role: "Mid-level Full Stack Software Engineer",
     period: "Oct 2025 – Jul 2026",
@@ -14,21 +25,6 @@ export const experience = [
       "Mentored junior and associate engineers through code reviews, pairing, and guidance on microservice patterns and TypeScript best practices.",
       "Modernized core toolchains to latest TypeScript standards — improving type safety, reducing tech debt, and optimizing compile-time performance.",
       "Accelerated production velocity by ~25% with Cursor AI workflows under architectural constraints — feature development, navigation, and debugging without shipping unsupervised code.",
-    ],
-  },
-  {
-    company: "Timpla.PH",
-    role: "Software Engineering Lead",
-    period: "Side gig · Concurrent",
-    location: "Philippines, Remote",
-    product: {
-      name: "Timpla.PH",
-      url: "https://timpla.ph",
-      blurb: "Meal-kit operations platform",
-    },
-    bullets: [
-      "Own engineering direction for the meal-kit admin and product systems — product, order, and inventory workflows.",
-      "Ship and maintain Next.js + TypeScript interfaces backed by Node services on AWS EC2 with GitHub Actions CI/CD.",
     ],
   },
   {
