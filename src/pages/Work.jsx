@@ -11,7 +11,11 @@ const FeaturedCard = ({ project }) => {
       className="group block border border-stone-mid bg-stone-light transition-colors duration-300 hover:border-signal"
     >
       <div className="grid md:grid-cols-2">
-        <ProjectPlaceholder title={project.title} className="h-full" />
+        <ProjectPlaceholder
+          title={project.title}
+          image={project.image}
+          className="h-full"
+        />
         <div className="flex flex-col justify-between p-6 sm:p-8">
           <div>
             <p className="font-mono text-xs uppercase tracking-wider text-signal">

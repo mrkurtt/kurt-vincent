@@ -9,7 +9,7 @@ const Contact = () => {
           tone="dark"
           eyebrow="Contact"
           title="Let's talk Lead scope"
-          description="Open to Software Engineering Lead and Senior Full-Stack roles on TypeScript platforms — architecture you own, standards you enforce, and AI-accelerated delivery that still ships clean systems."
+          description="Open to Software Engineering Lead and Senior Full-Stack roles inside a product org — founder-level ownership as an engineering lead: architecture you own, standards you enforce, and AI-accelerated delivery that still ships clean systems."
         />
 
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">

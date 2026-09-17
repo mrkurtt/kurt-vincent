@@ -1,4 +1,18 @@
-const ProjectPlaceholder = ({ title, className = "" }) => {
+const ProjectPlaceholder = ({ title, image, className = "" }) => {
+  if (image) {
+    return (
+      <div
+        className={`relative min-h-[220px] overflow-hidden bg-ink ${className}`}
+      >
+        <img
+          src={image}
+          alt={`${title} screenshot`}
+          className="h-full w-full object-cover object-top opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`hero-atmosphere relative flex min-h-[220px] items-end overflow-hidden p-6 sm:p-8 ${className}`}

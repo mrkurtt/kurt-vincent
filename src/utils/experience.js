@@ -1,11 +1,11 @@
 export const experience = [
   {
     company: "Ordlabs",
-    role: "Software Engineering Lead",
+    role: "Founder & Software Engineering Lead",
     period: "2024 – Present",
     location: "Philippines",
     bullets: [
-      "Designed Timpla, KourtSuite, and Ordlabs Pay from architecture through production — commerce ops, multi-tenant SaaS, and an internal payments hub.",
+      "Designed Timpla, KourtSuite, and Ordlabs Pay from architecture through production — commerce ops, multi-tenant SaaS, and a production payments hub used by Ordlabs products.",
       "Mentor 3 developers through code reviews, pairing, and architecture and coding standards so AI-accelerated delivery still ships under engineering discipline.",
       "Own stack choices across TypeScript, NestJS and Express, Next.js, MongoDB, Philippine payment rails, Cloud Run, and AWS EC2.",
     ],

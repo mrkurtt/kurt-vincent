@@ -1,14 +1,19 @@
+import timplaImage from "../assets/projects/timpla.png";
+import kourtsuiteImage from "../assets/projects/kourtsuite.png";
+import ordlabspayImage from "../assets/projects/ordlabspay.png";
+
 export const caseStudies = [
   {
     slug: "timpla",
     title: "Timpla",
-    role: "Lead engineer · designed from scratch",
+    role: "Founder & Software Engineering Lead · designed from scratch",
     oneLiner:
       "Meal-kit and mart operations platform for a real Philippine food brand.",
     description:
       "End-to-end commerce and ops: catalog, inventory-driven pricing, orders, dual payments, promotions, sales reporting, and a multi-role staff portal.",
     liveUrl: "https://timpla.ph",
     liveLabel: "timpla.ph",
+    image: timplaImage,
     stack: [
       "TypeScript",
       "Express",
@@ -74,13 +79,14 @@ export const caseStudies = [
   {
     slug: "kourtsuite",
     title: "KourtSuite",
-    role: "Lead engineer · designed from scratch",
+    role: "Founder & Software Engineering Lead · designed from scratch",
     oneLiner:
       "White-label multi-tenant SaaS for court facility booking and operations.",
     description:
       "Branded public booking portals, admin and superadmin backoffice, PH e-wallet checkout, revenue and payouts, promos, and platform SaaS billing — one product system across four apps.",
     liveUrl: "https://kourtsuite.com",
     liveLabel: "kourtsuite.com",
+    image: kourtsuiteImage,
     stack: [
       "TypeScript",
       "NestJS",
@@ -145,14 +151,15 @@ export const caseStudies = [
   {
     slug: "ordlabspay",
     title: "Ordlabs Pay",
-    role: "Lead engineer · designed from scratch",
+    role: "Founder & Software Engineering Lead · designed from scratch",
     oneLiner:
-      "Internal payments hub so multiple SaaS apps can share one Xendit account safely.",
+      "Production payments hub so multiple SaaS apps can share one Xendit account safely.",
     description:
       "Ledger-first payment requests, HMAC-signed webhook fan-out with retries, homegrown subscriptions, hashed API keys, and a superadmin operator console.",
     liveUrl: null,
     liveLabel: null,
-    note: "Internal platform",
+    note: "Production · Ordlabs products",
+    image: ordlabspayImage,
     stack: [
       "TypeScript",
       "NestJS",

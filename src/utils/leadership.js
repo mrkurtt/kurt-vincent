@@ -9,6 +9,6 @@ export const leadership = [
   },
   {
     title: "Ship the product line",
-    body: "One engineering practice across the line: Timpla commerce ops, KourtSuite white-label booking, Ordlabs Pay as the shared payments hub — speed under discipline, not unchecked generation.",
+    body: "One engineering practice across the line: Timpla commerce ops, KourtSuite white-label booking, Ordlabs Pay as the production shared payments hub — speed under discipline, not unchecked generation.",
   },
 ];

@@ -9,6 +9,7 @@ export const featuredProjects = caseStudies.map((study) => ({
   link: `/work/${study.slug}`,
   liveUrl: study.liveUrl,
   note: study.note,
+  image: study.image,
   stack: study.stack.slice(0, 6),
 }));
 

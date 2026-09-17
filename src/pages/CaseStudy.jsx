@@ -52,7 +52,7 @@ const CaseStudy = () => {
               </a>
             ) : (
               <span className="font-mono text-xs uppercase tracking-wider text-stone-mid">
-                {study.note || "Internal"}
+                {study.note || "Production"}
               </span>
             )}
           </div>
@@ -72,6 +72,7 @@ const CaseStudy = () => {
       <div className="section-inner section-pad space-y-16 lg:space-y-20">
         <ProjectPlaceholder
           title={study.title}
+          image={study.image}
           className="min-h-[280px] border border-stone-mid sm:min-h-[360px]"
         />
 
