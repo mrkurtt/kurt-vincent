@@ -6,7 +6,7 @@ export const caseStudies = [
   {
     slug: "timpla",
     title: "Timpla",
-    role: "Founder & Software Engineering Lead · designed from scratch",
+    role: "Independent · designed from scratch",
     oneLiner:
       "Meal-kit and mart operations platform for a real Philippine food brand.",
     description:
@@ -79,7 +79,7 @@ export const caseStudies = [
   {
     slug: "kourtsuite",
     title: "KourtSuite",
-    role: "Founder & Software Engineering Lead · designed from scratch",
+    role: "Independent · designed from scratch",
     oneLiner:
       "White-label multi-tenant SaaS for court facility booking and operations.",
     description:
@@ -151,14 +151,14 @@ export const caseStudies = [
   {
     slug: "ordlabspay",
     title: "Ordlabs Pay",
-    role: "Founder & Software Engineering Lead · designed from scratch",
+    role: "Independent · designed from scratch",
     oneLiner:
       "Production payments hub so multiple SaaS apps can share one Xendit account safely.",
     description:
       "Ledger-first payment requests, HMAC-signed webhook fan-out with retries, homegrown subscriptions, hashed API keys, and a superadmin operator console.",
     liveUrl: null,
     liveLabel: null,
-    note: "Production · Ordlabs products",
+    note: "Production",
     image: ordlabspayImage,
     stack: [
       "TypeScript",

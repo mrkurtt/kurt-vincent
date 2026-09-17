@@ -57,7 +57,7 @@ const Work = () => {
         <SectionHeader
           eyebrow="Selected work"
           title="Systems I designed from scratch"
-          description="Three products as lead engineer — commerce, multi-tenant SaaS, and a payments hub. Open a case study for architecture and decisions."
+          description="Three products designed from scratch — commerce, multi-tenant SaaS, and a payments hub. Open a case study for architecture and decisions."
         />
 
         <div className="space-y-6">

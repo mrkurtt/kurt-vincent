@@ -8,7 +8,7 @@ const Experience = () => {
         <SectionHeader
           eyebrow="Experience"
           title="Credibility built in production"
-          description="Lead ownership at Ordlabs — then platform and product roles that sharpened the same TypeScript stack."
+          description="Platform and product roles that sharpened the TypeScript stack — case studies cover products designed from scratch."
         />
 
         <ol className="relative space-y-0 border-l border-stone-mid pl-6 sm:pl-8">
