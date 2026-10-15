@@ -14,9 +14,11 @@ const ScrollToHash = () => {
     const id = hash.replace("#", "");
     const frame = window.requestAnimationFrame(() => {
       const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
+      if (!el) return;
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
     });
 
     return () => window.cancelAnimationFrame(frame);

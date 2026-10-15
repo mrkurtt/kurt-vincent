@@ -1,13 +1,35 @@
-const ProjectPlaceholder = ({ title, image, className = "" }) => {
-  if (image) {
+const ProjectPlaceholder = ({
+  title,
+  image,
+  alt,
+  cover = false,
+  className = "",
+}) => {
+  if (image && cover) {
     return (
       <div
-        className={`relative min-h-[220px] overflow-hidden bg-ink ${className}`}
+        className={`relative h-64 w-full min-w-0 overflow-hidden bg-ink md:h-full md:min-h-[18rem] ${className}`}
       >
         <img
           src={image}
-          alt={`${title} screenshot`}
-          className="h-full w-full object-cover object-top opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
+          alt={alt || `${title} product interface`}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-top"
+        />
+      </div>
+    );
+  }
+
+  if (image) {
+    return (
+      <div className={`min-w-0 overflow-hidden bg-ink ${className}`}>
+        <img
+          src={image}
+          alt={alt || `${title} product interface`}
+          loading="lazy"
+          decoding="async"
+          className="block h-auto w-full max-w-full"
         />
       </div>
     );
@@ -15,18 +37,15 @@ const ProjectPlaceholder = ({ title, image, className = "" }) => {
 
   return (
     <div
-      className={`hero-atmosphere relative flex min-h-[220px] items-end overflow-hidden p-6 sm:p-8 ${className}`}
-      aria-hidden
+      className={`flex min-h-[220px] w-full min-w-0 flex-col justify-end bg-ink p-6 text-stone sm:p-8 ${className}`}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-      <div className="relative">
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">
-          Screenshot placeholder
-        </p>
-        <p className="mt-2 font-display text-3xl font-bold text-white/90 sm:text-4xl">
-          {title}
-        </p>
-      </div>
+      <p className="text-sm font-medium text-signal-soft">Production system</p>
+      <p className="mt-2 font-display text-3xl font-medium text-white">
+        {title}
+      </p>
+      <p className="mt-3 max-w-sm text-sm leading-relaxed text-stone-mid">
+        A screenshot is not published for this project.
+      </p>
     </div>
   );
 };

@@ -5,25 +5,29 @@ export default {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#0B1220",
-          muted: "#3D4A5C",
-          soft: "#5C6B7E",
+          DEFAULT: "#1C1917",
+          muted: "#57534E",
+          soft: "#8A8178",
         },
         stone: {
-          DEFAULT: "#E8EEF2",
-          light: "#F4F7F9",
-          mid: "#D5DEE6",
+          DEFAULT: "#EFE8DF",
+          light: "#F7F3EE",
+          mid: "#E4D9CC",
         },
         signal: {
-          DEFAULT: "#0D9488",
-          dark: "#0F766E",
-          soft: "#CCFBF1",
+          DEFAULT: "#BE4B4B",
+          dark: "#9F3A3A",
+          deeper: "#7F2D2D",
+          soft: "#F8E8E4",
         },
       },
       fontFamily: {
-        display: ['"Syne"', "system-ui", "sans-serif"],
-        sans: ['"IBM Plex Sans"', "system-ui", "sans-serif"],
-        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+        display: ['"Fraunces"', "Georgia", "serif"],
+        sans: ['"Source Sans 3"', "system-ui", "sans-serif"],
+        mono: ['"DM Mono"', "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        card: "0 1px 2px rgba(28, 25, 23, 0.04), 0 8px 24px rgba(28, 25, 23, 0.04)",
       },
       maxWidth: {
         content: "72rem",

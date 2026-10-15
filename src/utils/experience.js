@@ -1,19 +1,29 @@
+/** Taken from the current resume. Do not add roles, dates, or results that are not on it. */
 export const experience = [
   {
     company: "ScaleForge",
-    role: "Mid-level Full Stack Software Engineer",
+    role: "Mid-level Backend Software Engineer",
     period: "Oct 2025 – Jul 2026",
     location: "Singapore, Remote",
-    product: {
-      name: "Opexa",
-      url: "https://opexa.io",
-      blurb: "Next-generation iGaming platform",
-    },
     bullets: [
-      "Led end-to-end feature delivery across NestJS microservices and Next.js interfaces using GraphQL, CQRS, and Event Sourcing for high fault-tolerance workflows.",
-      "Mentored junior and associate engineers through code reviews, pairing, and guidance on microservice patterns and TypeScript best practices.",
-      "Modernized core toolchains to latest TypeScript standards — improving type safety, reducing tech debt, and optimizing compile-time performance.",
-      "Accelerated production velocity by ~25% with Cursor AI workflows under architectural constraints — feature development, navigation, and debugging without shipping unsupervised code.",
+      "Developed and maintained backend services using NestJS, GraphQL, and microservice architecture to support application features and system integrations.",
+      "Implemented and enhanced reporting workflows, including Gross Gaming Revenue report improvements involving data backfills and aggregation pipeline changes while preserving compatibility with existing production data.",
+      "Contributed to conversion tracking integrations for external advertising platforms, supporting the flow of application events to third-party services.",
+      "Applied event-driven development, CQRS, and Event Sourcing patterns to backend system design and implementation.",
+      "Collaborated with engineers and QA teams to troubleshoot issues, validate changes, and maintain existing functionality during iterative releases.",
+    ],
+  },
+  {
+    company: "Independent contract projects",
+    role: "Full Stack Software Engineer, part-time",
+    period: "Jun 2022 – Sep 2026",
+    location: "Remote",
+    bullets: [
+      "Designed, developed, deployed, and maintained production web applications and backend services using Node.js, TypeScript, NestJS, Express.js, and MongoDB.",
+      "Built REST APIs and integrated external services to support business workflows, transactions, notifications, and application functionality.",
+      "Designed database models and aggregation workflows to support order management, reporting, inventory, and booking operations.",
+      "Deployed backend applications using Google Cloud Run and AWS EC2, with Docker and CI/CD automation through GitHub Actions where applicable.",
+      "Troubleshot production issues, improved existing application workflows, and maintained deployed systems as business requirements evolved.",
     ],
   },
   {
@@ -22,8 +32,8 @@ export const experience = [
     period: "Mar 2025 – Oct 2025",
     location: "Philippines, Remote",
     bullets: [
-      "Built and maintained the ERP frontend in Next.js with TypeScript across finance, sales, HR, and product modules.",
-      "Shipped reusable UI with ShadCN and Zustand; integrated REST APIs with backend for reliable data flow and performance.",
+      "Developed production web applications using React, Next.js, TypeScript, and Tailwind CSS, translating product requirements and UI designs into reusable, responsive components.",
+      "Integrated frontend applications with backend APIs and implemented client-side state management and application workflows in collaboration with designers and backend engineers.",
     ],
   },
   {
@@ -32,18 +42,7 @@ export const experience = [
     period: "Jan 2025 – Mar 2025",
     location: "Philippines, Hybrid",
     bullets: [
-      "Integrated a Laravel backend with RESTful APIs for secure client-server communication.",
-      "Built a cross-platform React Native app with Zustand and TailwindCSS (NativeWind) from Figma wireframes.",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Full Stack Developer",
-    period: "Jun 2022 – Dec 2024",
-    location: "Remote",
-    bullets: [
-      "Delivered multiple production management systems — attendance, nurse scheduling, tourist tracking, health records, and appointments — across MERN, Laravel, and Flutter.",
-      "Deployed on Render, Railway, and Vercel for reliable, accessible delivery across client projects.",
+      "Developed full-stack features using JavaScript and TypeScript, React, Node.js, and database technologies, contributing to API development, frontend implementation, debugging, and code reviews.",
     ],
   },
 ];

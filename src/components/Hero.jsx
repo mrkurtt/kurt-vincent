@@ -2,41 +2,63 @@ import { site } from "../utils/site";
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="hero-atmosphere relative flex min-h-screen items-center overflow-hidden text-stone"
-    >
-      <div className="section-inner relative z-10 w-full px-4 pb-20 pt-28 sm:px-6 lg:px-8 lg:pb-28 lg:pt-32">
-        <p className="animate-fade-up font-mono text-xs uppercase tracking-[0.2em] text-signal">
-          {site.domain}
-        </p>
-        <h1 className="animate-fade-up-delay mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+    <section id="hero" className="relative border-b border-stone-mid bg-stone-light">
+      <div className="section-inner px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20 lg:pt-32">
+        <p className="text-sm font-medium text-signal-dark">
           {site.name}
-        </h1>
-        <p className="animate-fade-up-delay mt-5 font-mono text-sm uppercase tracking-wider text-stone-mid sm:text-base">
-          {site.role}
-          <span className="mx-2 text-signal">·</span>
-          {site.tagline}
+          <span className="mx-2 text-ink-soft" aria-hidden="true">
+            ·
+          </span>
+          Philippines
         </p>
-        <p className="animate-fade-up-delay-2 mt-8 max-w-xl text-lg leading-relaxed text-stone/90 sm:text-xl">
+        <h1 className="mt-4 max-w-3xl text-balance font-display text-4xl font-medium leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+          {site.headline}
+        </h1>
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
           {site.summary}
         </p>
-        <div className="animate-fade-up-delay-2 mt-10 flex flex-wrap gap-4">
-          <a
-            href="/#experience"
-            className="inline-flex items-center bg-signal px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-signal-dark"
-          >
-            View experience
-          </a>
+        <p className="mt-5 max-w-xl border-l-2 border-signal-soft pl-4 text-sm leading-relaxed text-ink-muted">
+          <span className="font-medium text-signal-dark">Availability</span>
+          <span className="mt-1 block">{site.availability}</span>
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
           <a
             href={site.resume}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center border border-stone-mid/50 px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-stone transition-colors hover:border-signal hover:text-signal"
+            className="btn-primary"
           >
-            Download resume
+            View resume
+          </a>
+          <a href="/#work" className="btn-ghost">
+            Explore projects
+          </a>
+          <a href="/#contact" className="btn-ghost">
+            Contact me
           </a>
         </div>
+        <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <li>
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted transition-colors hover:text-signal-dark"
+            >
+              GitHub profile
+            </a>
+          </li>
+          <li>
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-muted transition-colors hover:text-signal-dark"
+            >
+              LinkedIn profile
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   );

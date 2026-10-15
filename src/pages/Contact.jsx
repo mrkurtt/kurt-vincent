@@ -1,56 +1,51 @@
 import SectionHeader from "../components/SectionHeader";
-import { site } from "../utils/site";
+import { profileLinks, site } from "../utils/site";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-pad bg-ink text-stone">
+    <section id="contact" className="section-pad bg-stone">
       <div className="section-inner">
         <SectionHeader
-          tone="dark"
           eyebrow="Contact"
-          title="Let's talk Lead scope"
-          description="Open to Software Engineering Lead and Senior Full-Stack roles on TypeScript platforms — architecture you own, standards you enforce, and AI-accelerated delivery that still ships clean systems."
+          title="How to reach me"
+          description="For backend, full-stack, and cloud-oriented software engineering roles."
         />
+        <p className="mb-10 max-w-xl text-sm leading-relaxed text-ink-muted">
+          {site.availability}
+        </p>
 
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          <div className="space-y-3 font-mono text-sm">
-            <a
-              href={`mailto:${site.email}`}
-              className="block text-lg text-white transition-colors hover:text-signal sm:text-xl"
-            >
-              {site.email}
-            </a>
-            <a
-              href={site.github}
-              target="_blank"
-              rel="noreferrer"
-              className="block text-stone-mid transition-colors hover:text-signal"
-            >
-              github.com/mrkurtt
-            </a>
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="block text-stone-mid transition-colors hover:text-signal"
-            >
-              linkedin.com/in/kurttimajo
-            </a>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={`mailto:${site.email}`}
-              className="inline-flex bg-signal px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-signal-dark"
-            >
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <ul className="space-y-3 text-sm">
+            {profileLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  {...(link.external
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
+                  className="text-ink-muted transition-colors hover:text-signal-dark"
+                >
+                  <span className="font-medium text-ink">{link.label}</span>
+                  {link.display ? (
+                    <span className="mt-0.5 block text-ink-soft sm:mt-0 sm:ml-3 sm:inline">
+                      {link.display}
+                    </span>
+                  ) : null}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap gap-3">
+            <a href={`mailto:${site.email}`} className="btn-primary">
               Email me
             </a>
             <a
               href={site.resume}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex border border-stone-mid/40 px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-stone transition-colors hover:border-signal hover:text-signal"
+              className="btn-ghost"
             >
-              Download resume
+              View resume
             </a>
           </div>
         </div>

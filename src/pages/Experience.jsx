@@ -7,16 +7,19 @@ const Experience = () => {
       <div className="section-inner">
         <SectionHeader
           eyebrow="Experience"
-          title="Credibility built in production"
-          description="Platform and product roles that sharpened the TypeScript stack — case studies cover products designed from scratch."
+          title="Roles around the systems"
+          description="Roles from my resume. The case studies are the freelance production systems."
         />
 
         <ol className="relative space-y-0 border-l border-stone-mid pl-6 sm:pl-8">
           {experience.map((job) => (
-            <li key={`${job.company}-${job.period}`} className="relative pb-14 last:pb-0">
+            <li
+              key={`${job.company}-${job.period}`}
+              className="relative pb-14 last:pb-0"
+            >
               <span
-                className="absolute -left-[1.55rem] top-1.5 h-3 w-3 rounded-full border-2 border-signal bg-stone sm:-left-[2.05rem]"
-                aria-hidden
+                className="absolute -left-[1.55rem] top-1.5 h-3 w-3 rounded-full border-2 border-signal-dark bg-stone sm:-left-[2.05rem]"
+                aria-hidden="true"
               />
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                 <div>
@@ -32,7 +35,7 @@ const Experience = () => {
                           href={job.product.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="link-underline text-signal"
+                          className="text-signal-dark underline-offset-4 hover:underline"
                         >
                           {job.product.name}
                         </a>
@@ -46,7 +49,9 @@ const Experience = () => {
                 </div>
                 <p className="shrink-0 font-mono text-xs uppercase tracking-wider text-ink-soft">
                   {job.period}
-                  <span className="mx-2">·</span>
+                  <span className="mx-2" aria-hidden="true">
+                    ·
+                  </span>
                   {job.location}
                 </p>
               </div>
@@ -54,7 +59,7 @@ const Experience = () => {
                 {job.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="relative pl-4 text-base leading-relaxed text-ink-muted before:absolute before:left-0 before:top-[0.65em] before:h-1 before:w-1 before:rounded-full before:bg-signal"
+                    className="relative pl-4 text-base leading-relaxed text-ink-muted before:absolute before:left-0 before:top-[0.65em] before:h-1 before:w-1 before:rounded-full before:bg-signal-dark"
                   >
                     {bullet}
                   </li>

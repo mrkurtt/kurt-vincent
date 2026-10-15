@@ -1,23 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@500;600;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --ink: #0b1220;
-  --ink-muted: #3d4a5c;
-  --ink-soft: #5c6b7e;
-  --stone: #e8eef2;
-  --stone-light: #f4f7f9;
-  --stone-mid: #d5dee6;
-  --signal: #0d9488;
-  --signal-dark: #0f766e;
-  --signal-soft: #ccfbf1;
+  --ink: #1c1917;
+  --ink-muted: #57534e;
+  --ink-soft: #8a8178;
+  --stone: #efe8df;
+  --stone-light: #f7f3ee;
+  --stone-mid: #e4d9cc;
+  --signal: #be4b4b;
+  --signal-dark: #9f3a3a;
+  --signal-soft: #f8e8e4;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal-dark);
+  outline-offset: 3px;
+}
+
+.bg-ink :focus-visible {
+  outline-color: #f3d2cc;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
@@ -50,52 +73,37 @@ body {
 @layer components {
   .blueprint-grid {
     background-color: var(--stone);
-    background-image:
-      linear-gradient(rgba(11, 18, 32, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(11, 18, 32, 0.04) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-
-  .hero-atmosphere {
-    background-color: #0b1220;
-    background-image:
-      radial-gradient(
-        ellipse 80% 60% at 70% 40%,
-        rgba(13, 148, 136, 0.28),
-        transparent 55%
-      ),
-      radial-gradient(
-        ellipse 50% 40% at 20% 80%,
-        rgba(13, 148, 136, 0.12),
-        transparent 50%
-      ),
-      linear-gradient(rgba(232, 238, 242, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(232, 238, 242, 0.03) 1px, transparent 1px);
-    background-size:
-      auto,
-      auto,
-      56px 56px,
-      56px 56px;
   }
 
   .section-pad {
-    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100%;
+    z-index: 100;
+    background: #fff;
+    color: var(--ink);
+    padding: 0.75rem 1rem;
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-size: 0.875rem;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-signal-deeper px-5 py-2.5 font-sans text-sm font-medium text-white transition-colors hover:bg-ink;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-ink/15 bg-white px-5 py-2.5 font-sans text-sm font-medium text-ink transition-colors hover:border-signal-dark hover:text-signal-dark;
   }
 
   .section-inner {
     @apply mx-auto w-full max-w-content;
-  }
-
-  .link-underline {
-    @apply relative inline-block transition-colors duration-300;
-  }
-
-  .link-underline::after {
-    content: "";
-    @apply absolute bottom-0 left-0 h-px w-0 bg-signal transition-all duration-300;
-  }
-
-  .link-underline:hover::after {
-    @apply w-full;
   }
 }

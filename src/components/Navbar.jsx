@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navLinks } from "../utils/nav";
@@ -7,12 +7,29 @@ import { site } from "../utils/site";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
+  const close = () => setOpen(false);
+
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-stone-mid/60 bg-stone-light/80 backdrop-blur-md">
-      <div className="section-inner flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-stone-mid bg-stone-light">
+      <nav
+        className="section-inner flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Primary"
+      >
         <Link
           to="/"
           className="font-display text-lg font-semibold tracking-tight text-ink"
+          onClick={close}
         >
           {site.brand}
         </Link>
@@ -20,7 +37,9 @@ const Navbar = () => {
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          onClick={() => setOpen((value) => !value)}
           className="text-ink md:hidden"
         >
           {open ? (
@@ -30,36 +49,60 @@ const Navbar = () => {
           )}
         </button>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-xs uppercase tracking-wider text-ink-muted transition-colors hover:text-signal"
+                className="text-sm text-ink-muted transition-colors hover:text-ink"
               >
                 {link.name}
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={site.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-signal-dark"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
-      </div>
+      </nav>
 
       {open && (
-        <ul className="border-t border-stone-mid bg-stone-light px-4 py-4 md:hidden">
+        <ul
+          id="mobile-nav"
+          className="border-t border-stone-mid bg-stone-light px-4 py-2 md:hidden"
+        >
           {navLinks.map((link) => (
-            <li key={link.href} className="py-3">
+            <li key={link.href}>
               <a
                 href={link.href}
-                onClick={() => setOpen(false)}
-                className="font-mono text-sm uppercase tracking-wider text-ink-muted"
+                onClick={close}
+                className="block py-3 text-base text-ink-muted"
               >
                 {link.name}
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={site.resume}
+              target="_blank"
+              rel="noreferrer"
+              onClick={close}
+              className="block py-3 text-base font-medium text-signal-dark"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
       )}
-    </nav>
+    </header>
   );
 };
 

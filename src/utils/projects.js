@@ -1,16 +1,20 @@
 import { caseStudies } from "./caseStudies";
 
-/** Homepage cards — same three products as case studies. */
-export const featuredProjects = caseStudies.map((study) => ({
+const toCard = (study) => ({
   slug: study.slug,
   title: study.title,
   role: study.role,
   description: study.oneLiner,
   link: `/work/${study.slug}`,
   liveUrl: study.liveUrl,
-  note: study.note,
+  liveLabel: study.liveLabel,
   image: study.image,
-  stack: study.stack.slice(0, 6),
-}));
+  imageAlt: study.imageAlt,
+  imageWidth: study.imageWidth,
+  imageHeight: study.imageHeight,
+  stack: study.cardStack,
+});
 
-export const supportingProjects = [];
+export const featuredProjects = caseStudies
+  .filter((study) => study.featured)
+  .map(toCard);

@@ -4,49 +4,61 @@ import SectionHeader from "../components/SectionHeader";
 import ProjectPlaceholder from "../components/ProjectPlaceholder";
 import { featuredProjects } from "../utils/projects";
 
+const ProjectActions = ({ project }) => {
+  return (
+    <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3">
+      <Link
+        to={project.link}
+        className="inline-flex items-center gap-1.5 text-sm font-medium text-signal-dark"
+      >
+        Read the {project.title} case study
+        <ArrowUpRightIcon className="h-3.5 w-3.5" aria-hidden="true" />
+      </Link>
+      {project.liveUrl && (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-ink-muted hover:text-signal-dark"
+        >
+          Visit {project.liveLabel || "live website"}
+          <ArrowUpRightIcon className="h-3.5 w-3.5" aria-hidden="true" />
+        </a>
+      )}
+    </div>
+  );
+};
+
 const FeaturedCard = ({ project }) => {
   return (
-    <Link
-      to={project.link}
-      className="group block border border-stone-mid bg-stone-light transition-colors duration-300 hover:border-signal"
-    >
+    <article className="overflow-hidden rounded-lg border border-stone-mid bg-white shadow-card">
       <div className="grid md:grid-cols-2">
         <ProjectPlaceholder
           title={project.title}
           image={project.image}
-          className="h-full"
+          alt={project.imageAlt}
+          cover
+          className="md:h-full"
         />
-        <div className="flex flex-col justify-between p-6 sm:p-8">
+        <div className="min-w-0 p-6 sm:p-8">
           <div>
-            <p className="font-mono text-xs uppercase tracking-wider text-signal">
+            <p className="text-sm font-medium text-signal-dark">
               {project.role}
             </p>
-            <h3 className="mt-2 flex items-center gap-2 font-display text-2xl font-semibold text-ink">
+            <h3 className="mt-2 font-display text-2xl font-semibold text-ink">
               {project.title}
-              <ArrowUpRightIcon className="h-5 w-5 text-ink-soft transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-signal" />
             </h3>
             <p className="mt-4 leading-relaxed text-ink-muted">
               {project.description}
             </p>
-            {project.note && (
-              <p className="mt-3 font-mono text-[11px] uppercase tracking-wider text-ink-soft">
-                {project.note}
-              </p>
-            )}
+            <p className="mt-5 font-mono text-xs text-ink-soft">
+              {project.stack.join(" · ")}
+            </p>
+            <ProjectActions project={project} />
           </div>
-          <ul className="mt-6 flex flex-wrap gap-2">
-            {project.stack.map((tech) => (
-              <li
-                key={tech}
-                className="font-mono text-[11px] uppercase tracking-wider text-ink-soft"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
-    </Link>
+    </article>
   );
 };
 
@@ -55,9 +67,9 @@ const Work = () => {
     <section id="work" className="section-pad bg-stone">
       <div className="section-inner">
         <SectionHeader
-          eyebrow="Selected work"
-          title="Systems I designed from scratch"
-          description="Three products designed from scratch — commerce, multi-tenant SaaS, and a payments hub. Open a case study for architecture and decisions."
+          eyebrow="Selected projects"
+          title="Production systems"
+          description="Three freelance products I architected and developed. Open a case study for the architecture, the parts I owned, and what is actually running."
         />
 
         <div className="space-y-6">

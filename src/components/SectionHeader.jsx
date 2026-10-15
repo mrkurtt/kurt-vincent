@@ -1,16 +1,19 @@
-
 const SectionHeader = ({ eyebrow, title, description, tone = "light" }) => {
   const isDark = tone === "dark";
 
   return (
-    <header className="mb-12 max-w-2xl lg:mb-16">
+    <header className="mb-10 max-w-2xl lg:mb-14">
       {eyebrow && (
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-signal">
+        <p
+          className={`text-sm font-medium ${
+            isDark ? "text-signal-soft" : "text-signal-dark"
+          }`}
+        >
           {eyebrow}
         </p>
       )}
       <h2
-        className={`mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl ${
+        className={`mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl ${
           isDark ? "text-white" : "text-ink"
         }`}
       >
@@ -18,7 +21,7 @@ const SectionHeader = ({ eyebrow, title, description, tone = "light" }) => {
       </h2>
       {description && (
         <p
-          className={`mt-4 text-lg leading-relaxed ${
+          className={`mt-4 text-base leading-relaxed sm:text-lg ${
             isDark ? "text-stone-mid" : "text-ink-muted"
           }`}
         >
